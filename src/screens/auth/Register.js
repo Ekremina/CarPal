@@ -28,7 +28,7 @@ export default function ({ navigation }) {
 
   async function register() {
     setLoading(true);
-    await firebase
+    const user = await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .catch(function (error) {
@@ -39,6 +39,13 @@ export default function ({ navigation }) {
         setLoading(false);
         alert(errorMessage);
       });
+
+    //Create a database entry for a new user
+    await firebase.firestore().collection("users").doc(user.user.uid).set({
+      name: name,
+      surname: surname,
+      email: email,
+    });
   }
 
   return (
