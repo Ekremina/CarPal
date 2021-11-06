@@ -20,6 +20,8 @@ import {
 
 export default function ({ navigation }) {
   const { isDarkmode, setTheme } = useTheme();
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -82,7 +84,30 @@ export default function ({ navigation }) {
             >
               Register
             </Text>
-            <Text>Email</Text>
+
+            <Text>Name</Text>
+            <TextInput
+              containerStyle={{ marginTop: 15 }}
+              placeholder="Enter your name"
+              value={name}
+              autoCapitalize="none"
+              autoCompleteType="off"
+              autoCorrect={false}
+              onChangeText={(text) => setName(text)}
+            />
+
+            <Text style={{ marginTop: 15 }}>Surname</Text>
+            <TextInput
+              containerStyle={{ marginTop: 15 }}
+              placeholder="Enter your surname"
+              value={surname}
+              autoCapitalize="none"
+              autoCompleteType="off"
+              autoCorrect={false}
+              onChangeText={(text) => setSurname(text)}
+            />
+
+            <Text style={{ marginTop: 15 }}>Email</Text>
             <TextInput
               containerStyle={{ marginTop: 15 }}
               placeholder="Enter your email"
