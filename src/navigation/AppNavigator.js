@@ -7,6 +7,7 @@ import { AuthContext } from "../provider/AuthProvider";
 // Main
 import Home from "../screens/Home";
 import SecondScreen from "../screens/SecondScreen";
+import Browse from "../screens/Browse";
 
 // Auth screens
 import Login from "../screens/auth/Login";
@@ -56,6 +57,7 @@ const Main = () => {
     >
       <MainStack.Screen name="Home" component={Home} />
       <MainStack.Screen name="SecondScreen" component={SecondScreen} />
+      <MainStack.Screen name="Browse" component={Browse} />
     </MainStack.Navigator>
   );
 };
