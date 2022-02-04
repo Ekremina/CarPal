@@ -8,6 +8,7 @@ import {
   useTheme,
 } from "react-native-rapi-ui";
 import { Ionicons } from "@expo/vector-icons";
+// import { Avatar } from "react-native-rapi-ui";
 
 export default function ({ navigation }) {
   const { isDarkmode, setTheme } = useTheme();
@@ -38,6 +39,7 @@ export default function ({ navigation }) {
           }
         }}
       />
+
       <View
         style={{
           flex: 1,
@@ -47,6 +49,13 @@ export default function ({ navigation }) {
       >
         {/* This text using ubuntu font */}
         <Text fontWeight="bold">Ekremina is the boss!!!!!!</Text>
+        {/* <Avatar
+          source={{
+            uri: "https://www.antidote.info/en/blog/reports/difference-between-people-persons-and-peoples",
+          }}
+          size="lg"
+          shape="round"
+        /> */}
       </View>
     </Layout>
   );

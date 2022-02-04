@@ -46,7 +46,41 @@ export default function ({ navigation }) {
           }}
         >
           {/* This text using ubuntu font */}
-          <Text fontWeight="bold">Ekremina is the boss!!!!!!</Text>
+          <Text fontWeight="bold">Cars in your area</Text>
+          <Card>
+            <Card.Title>Mercedes</Card.Title>
+            <Card.Divider />
+            <Card.Image
+              style={{
+                height: 220,
+                width: 320,
+              }}
+              source={require("../../assets/car1.jpg")}
+            ></Card.Image>
+            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+              <Text style={{ marginTop: 10, marginLeft: 5 }}>£50/day</Text>
+              <Text style={{ marginTop: 10, marginLeft: 160 }}>
+                4.5 ⭐⭐⭐⭐
+              </Text>
+            </View>
+          </Card>
+          <Card>
+            <Card.Title>Audi</Card.Title>
+            <Card.Divider />
+            <Card.Image
+              style={{
+                height: 220,
+                width: 320,
+              }}
+              source={require("../../assets/car2.jpg")}
+            ></Card.Image>
+            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
+              <Text style={{ marginTop: 10, marginLeft: 160 }}>
+                5 ⭐⭐⭐⭐⭐
+              </Text>
+            </View>
+          </Card>
           <Card>
             <Card.Title>BMW M4</Card.Title>
             <Card.Divider />
@@ -57,18 +91,101 @@ export default function ({ navigation }) {
               }}
               source={require("../../assets/car3.jpg")}
             ></Card.Image>
-            <Text style={{ marginTop: 20 }}>£69/day</Text>
-            <Text style={{ marginTop: 20 }}>£69/day</Text>
+            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
+              <Text style={{ marginTop: 10, marginLeft: 160 }}>
+                5 ⭐⭐⭐⭐⭐
+              </Text>
+            </View>
           </Card>
-          <Image
-            resizeMode="contain"
-            style={{
-              height: 220,
-              width: 220,
-            }}
-            source={require("../../assets/car1.jpg")}
-          />
-          {[1, 2, 3, 4, 5, 6, 7].map((n) => (
+
+          <Card>
+            <Card.Title>Ford</Card.Title>
+            <Card.Divider />
+            <Card.Image
+              style={{
+                height: 220,
+                width: 320,
+              }}
+              source={require("../../assets/car4.jpg")}
+            ></Card.Image>
+            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
+              <Text style={{ marginTop: 10, marginLeft: 160 }}>
+                5 ⭐⭐⭐⭐⭐
+              </Text>
+            </View>
+          </Card>
+          <Card>
+            <Card.Title>Ford</Card.Title>
+            <Card.Divider />
+            <Card.Image
+              style={{
+                height: 220,
+                width: 320,
+              }}
+              source={require("../../assets/car5.jpg")}
+            ></Card.Image>
+            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
+              <Text style={{ marginTop: 10, marginLeft: 160 }}>
+                5 ⭐⭐⭐⭐⭐
+              </Text>
+            </View>
+          </Card>
+          <Card>
+            <Card.Title>Nissan Qashqai</Card.Title>
+            <Card.Divider />
+            <Card.Image
+              style={{
+                height: 220,
+                width: 320,
+              }}
+              source={require("../../assets/car6.jpg")}
+            ></Card.Image>
+            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
+              <Text style={{ marginTop: 10, marginLeft: 160 }}>
+                5 ⭐⭐⭐⭐⭐
+              </Text>
+            </View>
+          </Card>
+          <Card>
+            <Card.Title>Volkswagen</Card.Title>
+            <Card.Divider />
+            <Card.Image
+              style={{
+                height: 220,
+                width: 320,
+              }}
+              source={require("../../assets/car7.jpg")}
+            ></Card.Image>
+            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
+              <Text style={{ marginTop: 10, marginLeft: 160 }}>
+                5 ⭐⭐⭐⭐⭐
+              </Text>
+            </View>
+          </Card>
+          <Card>
+            <Card.Title>Volkswagen</Card.Title>
+            <Card.Divider />
+            <Card.Image
+              style={{
+                height: 220,
+                width: 320,
+              }}
+              source={require("../../assets/car8.jpg")}
+            ></Card.Image>
+            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
+              <Text style={{ marginTop: 10, marginLeft: 160 }}>
+                5 ⭐⭐⭐⭐⭐
+              </Text>
+            </View>
+          </Card>
+
+          {/* {[1, 2, 3, 4, 5, 6, 7].map((n) => (
             <Image
               key={n}
               resizeMode="contain"
@@ -76,9 +193,9 @@ export default function ({ navigation }) {
                 height: 220,
                 width: 220,
               }}
-              source={require("../../assets/car3.jpg")}
+              source={require("../../assets/car2.jpg")}
             />
-          ))}
+          ))} */}
         </View>
       </ScrollView>
     </Layout>
