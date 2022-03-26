@@ -1,8 +1,15 @@
 import React from "react";
 import { View, Image, Text, ScrollView } from "react-native";
-import { Layout, TopNav, themeColor, useTheme } from "react-native-rapi-ui";
+import {
+  Layout,
+  Button,
+  TopNav,
+  themeColor,
+  useTheme,
+} from "react-native-rapi-ui";
+
 import { Ionicons } from "@expo/vector-icons";
-import { Card, Button } from "react-native-elements";
+import { Card } from "react-native-elements";
 
 export default function ({ navigation }) {
   const { isDarkmode, setTheme } = useTheme();
@@ -48,7 +55,16 @@ export default function ({ navigation }) {
           {/* This text using ubuntu font */}
           <Text fontWeight="bold">Cars in your area</Text>
           <Card>
-            <Card.Title>Mercedes</Card.Title>
+            <Card.Title>Mercedes-Benz</Card.Title>
+            <Button
+              text="View"
+              onPress={() => {
+                navigation.navigate("InfoCar");
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
             <Card.Divider />
             <Card.Image
               style={{
@@ -64,8 +80,18 @@ export default function ({ navigation }) {
               </Text>
             </View>
           </Card>
+
           <Card>
             <Card.Title>Audi</Card.Title>
+            <Button
+              text="View"
+              onPress={() => {
+                navigation.navigate("Browse");
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
             <Card.Divider />
             <Card.Image
               style={{
@@ -83,6 +109,15 @@ export default function ({ navigation }) {
           </Card>
           <Card>
             <Card.Title>BMW M4</Card.Title>
+            <Button
+              text="View"
+              onPress={() => {
+                navigation.navigate("Browse");
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
             <Card.Divider />
             <Card.Image
               style={{
@@ -101,6 +136,15 @@ export default function ({ navigation }) {
 
           <Card>
             <Card.Title>Ford</Card.Title>
+            <Button
+              text="View"
+              onPress={() => {
+                navigation.navigate("Browse");
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
             <Card.Divider />
             <Card.Image
               style={{
@@ -118,6 +162,15 @@ export default function ({ navigation }) {
           </Card>
           <Card>
             <Card.Title>Ford</Card.Title>
+            <Button
+              text="View"
+              onPress={() => {
+                navigation.navigate("Browse");
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
             <Card.Divider />
             <Card.Image
               style={{
@@ -135,6 +188,15 @@ export default function ({ navigation }) {
           </Card>
           <Card>
             <Card.Title>Nissan Qashqai</Card.Title>
+            <Button
+              text="View"
+              onPress={() => {
+                navigation.navigate("Browse");
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
             <Card.Divider />
             <Card.Image
               style={{
@@ -152,6 +214,15 @@ export default function ({ navigation }) {
           </Card>
           <Card>
             <Card.Title>Volkswagen</Card.Title>
+            <Button
+              text="View"
+              onPress={() => {
+                navigation.navigate("Browse");
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
             <Card.Divider />
             <Card.Image
               style={{
@@ -169,6 +240,15 @@ export default function ({ navigation }) {
           </Card>
           <Card>
             <Card.Title>Volkswagen</Card.Title>
+            <Button
+              text="View"
+              onPress={() => {
+                navigation.navigate("Browse");
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
             <Card.Divider />
             <Card.Image
               style={{

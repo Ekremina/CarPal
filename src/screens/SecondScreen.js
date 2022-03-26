@@ -6,6 +6,7 @@ import {
   Text,
   themeColor,
   useTheme,
+  TextInput,
 } from "react-native-rapi-ui";
 import { Ionicons } from "@expo/vector-icons";
 // import { Avatar } from "react-native-rapi-ui";
@@ -15,7 +16,7 @@ export default function ({ navigation }) {
   return (
     <Layout>
       <TopNav
-        middleContent="Second Screen"
+        middleContent="Rent Your Car"
         leftContent={
           <Ionicons
             name="chevron-back"
@@ -49,13 +50,6 @@ export default function ({ navigation }) {
       >
         {/* This text using ubuntu font */}
         <Text fontWeight="bold">Ekremina is the boss!!!!!!</Text>
-        {/* <Avatar
-          source={{
-            uri: "https://www.antidote.info/en/blog/reports/difference-between-people-persons-and-peoples",
-          }}
-          size="lg"
-          shape="round"
-        /> */}
       </View>
     </Layout>
   );

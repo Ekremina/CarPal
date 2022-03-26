@@ -65,22 +65,21 @@ export default function ({ navigation }) {
           justifyContent: "center",
         }}
       >
-        <Section style={{ marginTop: 20 }}>
+        {/* These UI components provided by Rapi UI */}
+        <Section style={{ marginTop: 10 }}>
           <SectionContent>
-            <Text fontWeight="bold" style={{ textAlign: "center" }}>
-              These UI components provided by Rapi UI
-            </Text>
+            <Text fontWeight="bold" style={{ textAlign: "center" }}></Text>
             <Button
-              text="Go to second screen"
+              text="Rent Your Car"
               onPress={() => {
                 navigation.navigate("SecondScreen");
               }}
               style={{
-                marginTop: 10,
+                marginTop: 0,
               }}
             />
             <Button
-              text="Go to Browsing"
+              text="Search Cars"
               onPress={() => {
                 navigation.navigate("Browse");
               }}
