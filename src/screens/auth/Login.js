@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
+import * as firebase from "firebase";
 import {
   ScrollView,
   TouchableOpacity,
@@ -7,7 +8,6 @@ import {
   KeyboardAvoidingView,
   Image,
 } from "react-native";
-import * as firebase from "firebase";
 
 import {
   Layout,

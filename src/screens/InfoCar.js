@@ -54,7 +54,6 @@ export default function ({ navigation }) {
           }}
         >
           {/* This text using ubuntu font */}
-          <Text fontWeight="bold"></Text>
           <Card>
             <Card.Title>Mercedes-Benz</Card.Title>
             <Card.Divider />

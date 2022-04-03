@@ -10,6 +10,51 @@ import {
 
 import { Ionicons } from "@expo/vector-icons";
 import { Card } from "react-native-elements";
+import { carData } from "./utils/data";
+
+// Function to pack "Card" objects to an array
+export function MinaFunction() {
+  var outputMina = [];
+
+  for (var sumNum = 0; sumNum < carData.length; sumNum++) {
+    outputMina.push(
+      <Card key={sumNum}>
+        <Card.Title>{carData[sumNum]["carname"]}</Card.Title>
+        <Button
+          text="View"
+          onPress={() => {
+            navigation.navigate("InfoCar");
+          }}
+          style={{
+            marginTop: 10,
+          }}
+        />
+        <Card.Divider />
+        {console.log("someurl/somepic" + sumNum)}
+        {/* Concatenation works here */}
+        {console.log(carData[sumNum]["pictureurl"])}
+        <Card.Image
+          style={{ height: 220, width: 320 }}
+          source={require("../../assets/car1.jpg")} // Needs to be made dynamic somehow...
+
+          // Thank you for motivation but i am far from being good at this :D i will make sure i put you and Liam on acknowledgements on thesis :D
+
+          // Righto - well have a good evening/morning and catcha later ☺ - good night 😊😊😊
+        ></Card.Image>
+        <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
+          <Text style={{ marginTop: 10, marginLeft: 5 }}>
+            £{carData[sumNum]["rate"]}/day
+          </Text>
+          <Text style={{ marginTop: 10, marginLeft: 160 }}>
+            ⭐ {carData[sumNum]["star"]}
+          </Text>
+          <Text style={{ marginTop: 30, marginLeft: 5 }}>Location: </Text>
+        </View>
+      </Card>
+    );
+  }
+  return outputMina;
+}
 
 export default function ({ navigation }) {
   const { isDarkmode, setTheme } = useTheme();
@@ -52,230 +97,8 @@ export default function ({ navigation }) {
             justifyContent: "center",
           }}
         >
-          {/* This text using ubuntu font */}
           <Text fontWeight="bold">Cars in your area</Text>
-          <Card>
-            <Card.Title>Mercedes-Benz</Card.Title>
-            <Button
-              text="View"
-              onPress={() => {
-                navigation.navigate("InfoCar");
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-            <Card.Divider />
-            <Card.Image
-              style={{
-                height: 220,
-                width: 320,
-              }}
-              source={require("../../assets/car1.jpg")}
-            ></Card.Image>
-            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-              <Text style={{ marginTop: 10, marginLeft: 5 }}>£50/day</Text>
-              <Text style={{ marginTop: 10, marginLeft: 160 }}>
-                4.5 ⭐⭐⭐⭐
-              </Text>
-            </View>
-          </Card>
-
-          <Card>
-            <Card.Title>Audi</Card.Title>
-            <Button
-              text="View"
-              onPress={() => {
-                navigation.navigate("Browse");
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-            <Card.Divider />
-            <Card.Image
-              style={{
-                height: 220,
-                width: 320,
-              }}
-              source={require("../../assets/car2.jpg")}
-            ></Card.Image>
-            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
-              <Text style={{ marginTop: 10, marginLeft: 160 }}>
-                5 ⭐⭐⭐⭐⭐
-              </Text>
-            </View>
-          </Card>
-          <Card>
-            <Card.Title>BMW M4</Card.Title>
-            <Button
-              text="View"
-              onPress={() => {
-                navigation.navigate("Browse");
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-            <Card.Divider />
-            <Card.Image
-              style={{
-                height: 220,
-                width: 320,
-              }}
-              source={require("../../assets/car3.jpg")}
-            ></Card.Image>
-            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
-              <Text style={{ marginTop: 10, marginLeft: 160 }}>
-                5 ⭐⭐⭐⭐⭐
-              </Text>
-            </View>
-          </Card>
-
-          <Card>
-            <Card.Title>Ford</Card.Title>
-            <Button
-              text="View"
-              onPress={() => {
-                navigation.navigate("Browse");
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-            <Card.Divider />
-            <Card.Image
-              style={{
-                height: 220,
-                width: 320,
-              }}
-              source={require("../../assets/car4.jpg")}
-            ></Card.Image>
-            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
-              <Text style={{ marginTop: 10, marginLeft: 160 }}>
-                5 ⭐⭐⭐⭐⭐
-              </Text>
-            </View>
-          </Card>
-          <Card>
-            <Card.Title>Ford</Card.Title>
-            <Button
-              text="View"
-              onPress={() => {
-                navigation.navigate("Browse");
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-            <Card.Divider />
-            <Card.Image
-              style={{
-                height: 220,
-                width: 320,
-              }}
-              source={require("../../assets/car5.jpg")}
-            ></Card.Image>
-            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
-              <Text style={{ marginTop: 10, marginLeft: 160 }}>
-                5 ⭐⭐⭐⭐⭐
-              </Text>
-            </View>
-          </Card>
-          <Card>
-            <Card.Title>Nissan Qashqai</Card.Title>
-            <Button
-              text="View"
-              onPress={() => {
-                navigation.navigate("Browse");
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-            <Card.Divider />
-            <Card.Image
-              style={{
-                height: 220,
-                width: 320,
-              }}
-              source={require("../../assets/car6.jpg")}
-            ></Card.Image>
-            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
-              <Text style={{ marginTop: 10, marginLeft: 160 }}>
-                5 ⭐⭐⭐⭐⭐
-              </Text>
-            </View>
-          </Card>
-          <Card>
-            <Card.Title>Volkswagen</Card.Title>
-            <Button
-              text="View"
-              onPress={() => {
-                navigation.navigate("Browse");
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-            <Card.Divider />
-            <Card.Image
-              style={{
-                height: 220,
-                width: 320,
-              }}
-              source={require("../../assets/car7.jpg")}
-            ></Card.Image>
-            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
-              <Text style={{ marginTop: 10, marginLeft: 160 }}>
-                5 ⭐⭐⭐⭐⭐
-              </Text>
-            </View>
-          </Card>
-          <Card>
-            <Card.Title>Volkswagen</Card.Title>
-            <Button
-              text="View"
-              onPress={() => {
-                navigation.navigate("Browse");
-              }}
-              style={{
-                marginTop: 10,
-              }}
-            />
-            <Card.Divider />
-            <Card.Image
-              style={{
-                height: 220,
-                width: 320,
-              }}
-              source={require("../../assets/car8.jpg")}
-            ></Card.Image>
-            <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-              <Text style={{ marginTop: 10, marginLeft: 5 }}>£70/day</Text>
-              <Text style={{ marginTop: 10, marginLeft: 160 }}>
-                5 ⭐⭐⭐⭐⭐
-              </Text>
-            </View>
-          </Card>
-
-          {/* {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-            <Image
-              key={n}
-              resizeMode="contain"
-              style={{
-                height: 220,
-                width: 220,
-              }}
-              source={require("../../assets/car2.jpg")}
-            />
-          ))} */}
+          {MinaFunction()}
         </View>
       </ScrollView>
     </Layout>

@@ -44,13 +44,12 @@ export default function ({ navigation }) {
         }}
       >
         <Card>
-          <Card.Title>Welcome</Card.Title>
+          <Card.Title>Welcome to Carpal</Card.Title>
           <Card.Divider />
           <Card.Image
             style={{
               height: 300,
               width: 420,
-
               marginLeft: 40,
               marginRight: 40,
             }}

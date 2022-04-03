@@ -17,6 +17,7 @@ import Register from "../screens/auth/Register";
 import ForgetPassword from "../screens/auth/ForgetPassword";
 
 import Loading from "../screens/utils/Loading";
+import carData from "../screens/utils/data";
 
 // Better put your these secret keys in .env file
 const firebaseConfig = {
