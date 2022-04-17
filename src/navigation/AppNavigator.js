@@ -6,8 +6,8 @@ import { AuthContext } from "../provider/AuthProvider";
 
 // Main
 import Home from "../screens/Home";
-import SecondScreen from "../screens/SecondScreen";
-import Browse from "../screens/Browse";
+import RentYourCar from "../screens/RentYourCar";
+import SearchCars from "../screens/SearchCars";
 import InfoCar from "../screens/InfoCar";
 import UserBooking from "../screens/UserBooking";
 
@@ -59,8 +59,8 @@ const Main = () => {
       }}
     >
       <MainStack.Screen name="Home" component={Home} />
-      <MainStack.Screen name="SecondScreen" component={SecondScreen} />
-      <MainStack.Screen name="Browse" component={Browse} />
+      <MainStack.Screen name="RentYourCar" component={RentYourCar} />
+      <MainStack.Screen name="SearchCars" component={SearchCars} />
       <MainStack.Screen name="InfoCar" component={InfoCar} />
       <MainStack.Screen name="UserBooking" component={UserBooking} />
     </MainStack.Navigator>

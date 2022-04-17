@@ -11,9 +11,25 @@ import {
 
 import { Ionicons } from "@expo/vector-icons";
 import { Card } from "react-native-elements";
+import { carData } from "./utils/data";
+
+aImageSet = [
+  require("../../assets/car1.jpg"),
+  require("../../assets/car2.jpg"),
+  require("../../assets/car3.jpg"),
+  require("../../assets/car4.jpg"),
+  require("../../assets/car5.jpg"),
+  require("../../assets/car6.jpg"),
+  require("../../assets/car7.jpg"),
+  require("../../assets/car8.jpg"),
+];
 
 export default function ({ navigation }) {
   const { isDarkmode, setTheme } = useTheme();
+
+  /* Temporary Index to control the pages until we find a way to pass this as an argument somewhere */
+  var iCarIndex = 2;
+
   return (
     <Layout>
       <TopNav
@@ -55,35 +71,36 @@ export default function ({ navigation }) {
         >
           {/* This text using ubuntu font */}
           <Card>
-            <Card.Title>Mercedes-Benz</Card.Title>
+            <Card.Title>{carData[iCarIndex]["carname"]}</Card.Title>
             <Card.Divider />
             <Card.Image
               style={{
                 height: 220,
                 width: 320,
               }}
-              source={require("../../assets/car1.jpg")}
+              source={aImageSet[iCarIndex]}
             ></Card.Image>
             <View style={{ flexDirection: "row", flexWrap: "wrap" }}>
-              <Text style={{ marginTop: 10, marginLeft: 5 }}>£50/day</Text>
+              <Text style={{ marginTop: 10, marginLeft: 5 }}>
+                £{carData[iCarIndex]["rate"]}/day
+              </Text>
               <Text style={{ marginTop: 10, marginLeft: 160 }}>
-                4.5 ⭐⭐⭐⭐
+                ⭐ {carData[iCarIndex]["star"]}
               </Text>
 
               <Card.Title
                 style={{ marginTop: 30, marginLeft: 5, marginRight: 50 }}
               >
-                Description
+                Notes for {carData[iCarIndex]["carname"]}
               </Card.Title>
-              <Text style={{ marginTop: 10, marginLeft: 10, marginRight: 50 }}>
-                Mercedes-Benz CL 2.0
+
+              <Text style={{ marginTop: 10, marginLeft: 5, marginRight: 50 }}>
+                ✅ {carData[iCarIndex]["notes"][0]}
               </Text>
               <Text style={{ marginTop: 20, marginLeft: 5, marginRight: 50 }}>
-                ✅ CAR DISINFECTED before each trip
+                ✅ {carData[iCarIndex]["notes"][1]}
               </Text>
-              <Text style={{ marginTop: 20, marginLeft: 5, marginRight: 50 }}>
-                ✅ Free Cancellation
-              </Text>
+
               {/* Calendar here */}
               <Card.Title
                 style={{ marginTop: 30, marginLeft: 5, marginRight: 50 }}
@@ -91,27 +108,15 @@ export default function ({ navigation }) {
                 Choose Trip Dates
               </Card.Title>
               <Card.Title
-                style={{ marginTop: 30, marginLeft: 5, marginRight: 50 }}
+                style={{ marginTop: 20, marginLeft: 5, marginRight: 50 }}
               >
-                Pickup & Return
+                Pickup & Return:
+                <Text style={{ marginTop: 20, marginLeft: 5, marginRight: 50 }}>
+                  📍 {carData[iCarIndex]["pickup"]}
+                </Text>
               </Card.Title>
-              <Text style={{ marginTop: 20, marginLeft: 5, marginRight: 50 }}>
-                📍 Hemel Hempstead
-              </Text>
             </View>
           </Card>
-
-          {/* {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-            <Image
-              key={n}
-              resizeMode="contain"
-              style={{
-                height: 220,
-                width: 220,
-              }}
-              source={require("../../assets/car2.jpg")}
-            />
-          ))} */}
           <Button
             text="Continue"
             onPress={() => {

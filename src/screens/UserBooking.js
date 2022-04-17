@@ -74,17 +74,6 @@ export default function ({ navigation }) {
             </View>
           </Card>
 
-          {/* {[1, 2, 3, 4, 5, 6, 7].map((n) => (
-            <Image
-              key={n}
-              resizeMode="contain"
-              style={{
-                height: 220,
-                width: 220,
-              }}
-              source={require("../../assets/car2.jpg")}
-            />
-          ))} */}
           <Button
             text="Continue"
             onPress={() => {

@@ -71,7 +71,7 @@ export default function ({ navigation }) {
             <Button
               text="Rent Your Car"
               onPress={() => {
-                navigation.navigate("SecondScreen");
+                navigation.navigate("RentYourCar");
               }}
               style={{
                 marginTop: 0,
@@ -80,7 +80,7 @@ export default function ({ navigation }) {
             <Button
               text="Search Cars"
               onPress={() => {
-                navigation.navigate("Browse");
+                navigation.navigate("SearchCars");
               }}
               style={{
                 marginTop: 10,
